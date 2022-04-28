@@ -739,13 +739,14 @@
         </TablixRowHierarchy>
         <DataSetName>dailyReportDataSet</DataSetName>
         <Top>0.555in</Top>
-        <Left>0.19167in</Left>
+        <Left>0.69167in</Left>
         <Height>0.5in</Height>
-        <Width>10.93333in</Width>
+        <Width>10.93334in</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
+          <BackgroundColor>LightSteelBlue</BackgroundColor>
         </Style>
       </Tablix>
       <Textbox Name="Textbox33">
@@ -764,7 +765,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox33</rd:DefaultName>
         <Top>0.14667in</Top>
-        <Left>1.26111in</Left>
+        <Left>1.76111in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>1</ZIndex>
@@ -794,7 +795,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox34</rd:DefaultName>
         <Top>0.14667in</Top>
-        <Left>0.19167in</Left>
+        <Left>0.69167in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>2</ZIndex>
@@ -810,9 +811,11 @@
       </Textbox>
     </ReportItems>
     <Height>2.21667in</Height>
-    <Style />
+    <Style>
+      <BackgroundColor>Plum</BackgroundColor>
+    </Style>
   </Body>
-  <Width>11.325in</Width>
+  <Width>11.62501in</Width>
   <Page>
     <PageHeader>
       <Height>1in</Height>
@@ -824,7 +827,7 @@
           <Value>chain_wheel_tire2</Value>
           <Sizing>FitProportional</Sizing>
           <Top>0.155in</Top>
-          <Left>3.42222in</Left>
+          <Left>2.85556in</Left>
           <Height>0.5in</Height>
           <Width>0.5in</Width>
           <Style>
@@ -855,7 +858,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.27167in</Top>
-          <Left>3.99167in</Left>
+          <Left>3.42501in</Left>
           <Height>0.38333in</Height>
           <Width>3.66667in</Width>
           <ZIndex>1</ZIndex>

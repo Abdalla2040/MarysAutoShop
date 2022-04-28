@@ -33,7 +33,7 @@ namespace Marys_Auto
                 /// Phone Number Check
                 if (int.TryParse(phoneNumberBox.Text, out int num))
                 {
-                    if (phoneNumberBox.Text.Length == 10)
+                    if (phoneNumberBox.Text.Length == 7)
                     {
                         //Vehicle Info Null Check
                         if (String.IsNullOrEmpty(makeBox.Text) || String.IsNullOrEmpty(modelBox.Text) || String.IsNullOrEmpty(trimBox.Text) || String.IsNullOrEmpty(trimBox.Text) || String.IsNullOrEmpty(vinBox.Text) || String.IsNullOrEmpty(yearBox.Text))
@@ -64,13 +64,13 @@ namespace Marys_Auto
                     // If phone number isnt 10 digits long
                     else
                     {
-                        MessageBox.Show("That was an invalid phone number. Make sure you type out only numbers with nothing else. It should be 10 digits long.", "Phone Number Error");
+                        MessageBox.Show("That was an invalid phone number. Make sure you type out only numbers with nothing else. It should be 7 digits long.", "Phone Number Error");
                     }
                 }
                 // If phone number has non ints in it
                 else
                 {
-                    MessageBox.Show("That was an invalid phone number. Make sure you type out only numbers with nothing else. It should be 10 digits long.", "Phone Number Error");
+                    MessageBox.Show("That was an invalid phone number. Make sure you type out only numbers with nothing else. It should be 7 digits long.", "Phone Number Error");
                 }
 
             }
