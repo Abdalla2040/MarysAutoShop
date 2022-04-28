@@ -1,9 +1,9 @@
-﻿
-using Marys_Auto.Models;
+﻿using Marys_Auto.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,94 +18,81 @@ namespace Marys_Auto
         {
             InitializeComponent();
         }
-
+        
+       
         private void submitButton_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    ///Customer Info Null Check
-            //    if (String.IsNullOrEmpty(firstNameBox.Text) || String.IsNullOrEmpty(lastNameBox.Text) || String.IsNullOrEmpty(cityBox.Text) || String.IsNullOrEmpty(stateBox.Text) || String.IsNullOrEmpty(streetAdressBox.Text) || String.IsNullOrEmpty(phoneNumberBox.Text))
-            //    {
-            //        MessageBox.Show("One or more of the boxes were left blank in the Customer Info section. Please fill out every box.", "Customer Info Null");
-            //    }
+            try
+            {
+                ///Customer Info Null Check
+                if (String.IsNullOrEmpty(firstNameBox.Text) || String.IsNullOrEmpty(lastNameBox.Text) || String.IsNullOrEmpty(cityBox.Text) || String.IsNullOrEmpty(stateBox.Text) || String.IsNullOrEmpty(streetAdressBox.Text) || String.IsNullOrEmpty(phoneNumberBox.Text))
+                {
+                    MessageBox.Show("One or more of the boxes were left blank in the Customer Info section. Please fill out every box.", "Customer Info Null");
+                }
 
-            //   /// Phone Number Check
-            //    if (int.TryParse(phoneNumberBox.Text, out int num))
-            //    {
-            //        if (phoneNumberBox.Text.Length == 10)
-            //        {
-            //            //Vehicle Info Null Check
-            //            if (String.IsNullOrEmpty(makeBox.Text) || String.IsNullOrEmpty(modelBox.Text) || String.IsNullOrEmpty(trimBox.Text) || String.IsNullOrEmpty(trimBox.Text) || String.IsNullOrEmpty(vinBox.Text) || String.IsNullOrEmpty(yearBox.Text))
-            //            {
-            //                MessageBox.Show("One or more of the boxes were left blank in the Vehicle Info section. Please fill out every box.", "Vehicle Info Null");
-            //            }
-            //            //Issue Text Box Null Check
-            //            else if (String.IsNullOrEmpty(ServicesBox.Text))
-            //            {
-            //                MessageBox.Show("You have to specify an issue with the vehicle.", "Issue Text Box Null");
-            //            }
-            //            else if (String.IsNullOrEmpty(estimatedPriceBox.Text) || String.IsNullOrEmpty(actualPriceBox.Text))
-            //            {
-            //                MessageBox.Show("The Estimated Price or Actual Price is empty.", "Price Info Null");
-            //            }
-            //            else
-            //            {
-            //                ////////////////////////////////////////
-            //                ///EVERYTHING VALIDATED NEW CODE HERE///
-            //                ////////////////////////////////////////
-            //                MessageBox.Show("Validated");
-            //Customer customer = new Customer();
-            //customer.Customer_ID = 0;
-            //customer.CustomerFirstName = firstNameBox.Text.Trim();
-            //customer.CustomerLastName = lastNameBox.Text.Trim();
-            //customer.CustomerStreetAddress = streetAdressBox.Text.Trim();
-            //customer.CustomerCity = cityBox.Text.Trim();
-            //customer.CustomerState = stateBox.Text.Trim();
-            //customer.CustomerZipCode = txtZip.Text.Trim();
-            //customer.CustomerPhoneAreaCode = txtArea.Text.Trim();
-            //customer.CustomerPhoneNumber = phoneNumberBox.Text.Trim();
-            //using (MarysAutoShopDBEntities db = new MarysAutoShopDBEntities())
-            //{
-            //    db.Customers.Add(customer);
-            //    db.SaveChanges();
-            //}
-            //clear();
-            //MessageBox.Show("Customer Added", "Data Insertion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                /// Phone Number Check
+                if (int.TryParse(phoneNumberBox.Text, out int num))
+                {
+                    if (phoneNumberBox.Text.Length == 7)
+                    {
+                        //Vehicle Info Null Check
+                        if (String.IsNullOrEmpty(makeBox.Text) || String.IsNullOrEmpty(modelBox.Text) || String.IsNullOrEmpty(trimBox.Text) || String.IsNullOrEmpty(trimBox.Text) || String.IsNullOrEmpty(vinBox.Text) || String.IsNullOrEmpty(yearBox.Text))
+                        {
+                            MessageBox.Show("One or more of the boxes were left blank in the Vehicle Info section. Please fill out every box.", "Vehicle Info Null");
+                        }
+                        //Issue Text Box Null Check
+                        else if (String.IsNullOrEmpty(ServicesBox.Text))
+                        {
+                            MessageBox.Show("You have to specify an issue with the vehicle.", "Issue Text Box Null");
+                        }
+                        else if (String.IsNullOrEmpty(estimatedPriceBox.Text) || String.IsNullOrEmpty(actualPriceBox.Text))
+                        {
+                            MessageBox.Show("The Estimated Price or Actual Price is empty.", "Price Info Null");
+                        }
+                        else
+                        {
+                            //////////////////////////////////////////
+                            /////EVERYTHING VALIDATED NEW CODE HERE///
+                            //////////////////////////////////////////
+                            
+                            InsertServiceData();
 
 
 
+                        }
+                    }
+                    // If phone number isnt 10 digits long
+                    else
+                    {
+                        MessageBox.Show("That was an invalid phone number. Make sure you type out only numbers with nothing else. It should be 7 digits long.", "Phone Number Error");
+                    }
+                }
+                // If phone number has non ints in it
+                else
+                {
+                    MessageBox.Show("That was an invalid phone number. Make sure you type out only numbers with nothing else. It should be 7 digits long.", "Phone Number Error");
+                }
+
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Your value was in an incorrect format. Please enter only number a number");
+            }
+            catch (OverflowException)
+            {
+                MessageBox.Show("That amount was too much. Please enter another amount.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.GetType() + " : " + ex.Message);
+            }
 
 
-
-
-
-            //            }
-            //        }
-            //       // If phone number isnt 10 digits long
-            //        else
-            //        {
-            //            MessageBox.Show("That was an invalid phone number. Make sure you type out only numbers with nothing else. It should be 10 digits long.", "Phone Number Error");
-            //        }
-            //    }
-            //   // If phone number has non ints in it
-            //    else
-            //    {
-            //        MessageBox.Show("That was an invalid phone number. Make sure you type out only numbers with nothing else. It should be 10 digits long.", "Phone Number Error");
-            //    }
-
-            //}
-            //catch (FormatException)
-            //{
-            //    MessageBox.Show("Your value was in an incorrect format. Please enter only number a number");
-            //}
-            //catch (OverflowException)
-            //{
-            //    MessageBox.Show("That amount was too much. Please enter another amount.");
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.GetType() + " : " + ex.Message);
-            //}
+        }
+       
+        
+        public void InsertServiceData()
+        {
             Customer customer = new Customer();
             customer.Customer_ID = 0;
             customer.CustomerFirstName = firstNameBox.Text.Trim();
@@ -116,9 +103,10 @@ namespace Marys_Auto
             customer.CustomerZipCode = txtZip.Text.Trim();
             customer.CustomerPhoneAreaCode = txtArea.Text.Trim();
             customer.CustomerPhoneNumber = phoneNumberBox.Text.Trim();
-            using (MarysAutoDBEntities db = new MarysAutoDBEntities())
+            using (MarysAutoDB2Entities db = new MarysAutoDB2Entities())
             {
                 db.Customers.Add(customer);
+
                 db.SaveChanges();
             }
 
@@ -126,11 +114,14 @@ namespace Marys_Auto
             vehicle.Vehicle_ID = 0;
             vehicle.VehicleMake = makeBox.SelectedItem.ToString();
             vehicle.VehicleModel = modelBox.SelectedItem.ToString();
-            vehicle.VehicleTrim = trimBox.SelectedItem.ToString();
+            if (trimBox.SelectedItem == null)
+                vehicle.VehicleTrim = "";
+            else
+                vehicle.VehicleTrim = trimBox.SelectedItem.ToString();
             vehicle.VehicleYear = yearBox.SelectedItem.ToString();
             vehicle.VIN = vinBox.Text;
             vehicle.Customer_ID = customer.Customer_ID;
-            using (MarysAutoDBEntities db = new MarysAutoDBEntities())
+            using (MarysAutoDB2Entities db = new MarysAutoDB2Entities())
             {
                 db.Vehicles.Add(vehicle);
                 db.SaveChanges();
@@ -161,9 +152,20 @@ namespace Marys_Auto
                 employee.Experience = 5;
             else if (employee.EmployeeFirstName == "Wendy")
                 employee.Experience = 2;
-            using (MarysAutoDBEntities db = new MarysAutoDBEntities())
+            using (MarysAutoDB2Entities db = new MarysAutoDB2Entities())
             {
                 db.Employees.Add(employee);
+                db.SaveChanges();
+            }
+
+
+
+            Service service = new Service();
+            service.Service_ID = 0;
+            service.ServiceName = ServicesBox.SelectedItem.ToString();
+            using (MarysAutoDB2Entities db = new MarysAutoDB2Entities())
+            {
+                db.Services.Add(service);
                 db.SaveChanges();
             }
 
@@ -171,33 +173,23 @@ namespace Marys_Auto
             invoice.Invoice_ID = 0;
             DateTime todaysDate = DateTime.Today;
             invoice.Date = todaysDate;
-            invoice.Vehicle_ID = vehicle.Vehicle_ID;
             invoice.Employee_ID = employee.Employee_ID;
+            invoice.Customer_ID = customer.Customer_ID;
+            invoice.Service_ID = service.Service_ID;
             invoice.EstimatePrice = decimal.Parse(estimatedPriceBox.Text);
             invoice.FinalPrice = decimal.Parse(actualPriceBox.Text);
-            using (MarysAutoDBEntities db = new MarysAutoDBEntities())
+            using (MarysAutoDB2Entities db = new MarysAutoDB2Entities())
             {
                 db.Invoices.Add(invoice);
                 db.SaveChanges();
             }
 
-            Service service = new Service();
-            service.Invoice_ID = 0;
-            service.ServiceName = ServicesBox.SelectedItem.ToString();
-            service.Invoice_ID = invoice.Invoice_ID;
-            using (MarysAutoDBEntities db = new MarysAutoDBEntities())
-            {
-                db.Services.Add(service);
-                db.SaveChanges();
-            }
-
-
-
             MessageBox.Show("Data Inserted", "Data Insertion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             clear();
-        }
-
         
+    }
+
+
         public void clear()
         {
             //Customer Info Reset

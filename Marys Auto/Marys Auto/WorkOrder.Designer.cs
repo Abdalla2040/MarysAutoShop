@@ -29,195 +29,213 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.workOrdergridView = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.actualPriceBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.estimatedPriceBox = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.Invoice_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vehicle_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Employee_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstimatePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FinalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.invoiceIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estimatePriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.finalPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnWOdelete = new System.Windows.Forms.Button();
+            this.btnWorkupdate = new System.Windows.Forms.Button();
+            this.btnWOcancel = new System.Windows.Forms.Button();
+            this.invoiceDataGridView = new System.Windows.Forms.DataGridView();
+            this.InvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serviceIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serviceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.workOrdergridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // workOrdergridView
-            // 
-            this.workOrdergridView.AllowUserToDeleteRows = false;
-            this.workOrdergridView.AutoGenerateColumns = false;
-            this.workOrdergridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.workOrdergridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Invoice_ID,
-            this.Date,
-            this.Vehicle_ID,
-            this.Employee_ID,
-            this.EstimatePrice,
-            this.FinalPrice,
-            this.invoiceIDDataGridViewTextBoxColumn,
-            this.dateDataGridViewTextBoxColumn,
-            this.vehicleIDDataGridViewTextBoxColumn,
-            this.employeeIDDataGridViewTextBoxColumn,
-            this.estimatePriceDataGridViewTextBoxColumn,
-            this.finalPriceDataGridViewTextBoxColumn,
-            this.employeeDataGridViewTextBoxColumn,
-            this.vehicleDataGridViewTextBoxColumn});
-            this.workOrdergridView.DataSource = this.invoiceBindingSource;
-            this.workOrdergridView.Location = new System.Drawing.Point(3, 3);
-            this.workOrdergridView.Name = "workOrdergridView";
-            this.workOrdergridView.Size = new System.Drawing.Size(558, 322);
-            this.workOrdergridView.TabIndex = 0;
-            this.workOrdergridView.DoubleClick += new System.EventHandler(this.workOrdergridView_DoubleClick);
             // 
             // actualPriceBox
             // 
             this.actualPriceBox.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.actualPriceBox.Location = new System.Drawing.Point(394, 359);
-            this.actualPriceBox.Margin = new System.Windows.Forms.Padding(2);
+            this.actualPriceBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.actualPriceBox.Location = new System.Drawing.Point(333, 408);
+            this.actualPriceBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.actualPriceBox.Multiline = true;
             this.actualPriceBox.Name = "actualPriceBox";
-            this.actualPriceBox.Size = new System.Drawing.Size(64, 20);
+            this.actualPriceBox.Size = new System.Drawing.Size(88, 29);
             this.actualPriceBox.TabIndex = 32;
             this.actualPriceBox.Text = "$0.00";
-            this.actualPriceBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.actualPriceBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(303, 362);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(221, 409);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 13);
+            this.label6.Size = new System.Drawing.Size(106, 22);
             this.label6.TabIndex = 33;
-            this.label6.Text = "Actual Price";
+            this.label6.Text = "Final Price";
             // 
-            // estimatedPriceBox
+            // btnWOdelete
             // 
-            this.estimatedPriceBox.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.estimatedPriceBox.Location = new System.Drawing.Point(150, 356);
-            this.estimatedPriceBox.Margin = new System.Windows.Forms.Padding(2);
-            this.estimatedPriceBox.Name = "estimatedPriceBox";
-            this.estimatedPriceBox.Size = new System.Drawing.Size(64, 20);
-            this.estimatedPriceBox.TabIndex = 31;
-            this.estimatedPriceBox.Text = "$0.00";
-            this.estimatedPriceBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnWOdelete.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnWOdelete.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
+            this.btnWOdelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnWOdelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWOdelete.ForeColor = System.Drawing.Color.White;
+            this.btnWOdelete.Location = new System.Drawing.Point(308, 469);
+            this.btnWOdelete.Name = "btnWOdelete";
+            this.btnWOdelete.Size = new System.Drawing.Size(122, 51);
+            this.btnWOdelete.TabIndex = 36;
+            this.btnWOdelete.Text = "DELETE";
+            this.btnWOdelete.UseVisualStyleBackColor = false;
+            this.btnWOdelete.Click += new System.EventHandler(this.btnWOdelete_Click);
             // 
-            // label15
+            // btnWorkupdate
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(56, 359);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(80, 13);
-            this.label15.TabIndex = 30;
-            this.label15.Text = "Estimated Price";
+            this.btnWorkupdate.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnWorkupdate.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
+            this.btnWorkupdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnWorkupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWorkupdate.ForeColor = System.Drawing.Color.White;
+            this.btnWorkupdate.Location = new System.Drawing.Point(153, 469);
+            this.btnWorkupdate.Name = "btnWorkupdate";
+            this.btnWorkupdate.Size = new System.Drawing.Size(122, 51);
+            this.btnWorkupdate.TabIndex = 37;
+            this.btnWorkupdate.Text = "UPDATE";
+            this.btnWorkupdate.UseVisualStyleBackColor = false;
+            this.btnWorkupdate.Click += new System.EventHandler(this.btnWorkupdate_Click);
             // 
-            // Invoice_ID
+            // btnWOcancel
             // 
-            this.Invoice_ID.DataPropertyName = "Invoice_ID";
-            this.Invoice_ID.HeaderText = "Invoice ID";
-            this.Invoice_ID.Name = "Invoice_ID";
+            this.btnWOcancel.BackColor = System.Drawing.Color.Bisque;
+            this.btnWOcancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnWOcancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnWOcancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWOcancel.ForeColor = System.Drawing.Color.DimGray;
+            this.btnWOcancel.Location = new System.Drawing.Point(463, 469);
+            this.btnWOcancel.Name = "btnWOcancel";
+            this.btnWOcancel.Size = new System.Drawing.Size(122, 51);
+            this.btnWOcancel.TabIndex = 38;
+            this.btnWOcancel.Text = "CANCEL";
+            this.btnWOcancel.UseVisualStyleBackColor = false;
+            this.btnWOcancel.Click += new System.EventHandler(this.btnWOcancel_Click);
             // 
-            // Date
+            // invoiceDataGridView
             // 
-            this.Date.DataPropertyName = "Date";
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
+            this.invoiceDataGridView.AutoGenerateColumns = false;
+            this.invoiceDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.invoiceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.invoiceDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.InvoiceID,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.customerIDDataGridViewTextBoxColumn,
+            this.serviceIDDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.customerDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn11,
+            this.serviceDataGridViewTextBoxColumn});
+            this.invoiceDataGridView.DataSource = this.invoiceBindingSource;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.PaleGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.invoiceDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
+            this.invoiceDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
+            this.invoiceDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.invoiceDataGridView.Name = "invoiceDataGridView";
+            this.invoiceDataGridView.RowHeadersWidth = 51;
+            this.invoiceDataGridView.RowTemplate.Height = 24;
+            this.invoiceDataGridView.Size = new System.Drawing.Size(701, 388);
+            this.invoiceDataGridView.TabIndex = 39;
+            this.invoiceDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.invoiceDataGridView_DataError_1);
+            this.invoiceDataGridView.DoubleClick += new System.EventHandler(this.invoiceDataGridView_DoubleClick_1);
             // 
-            // Vehicle_ID
+            // InvoiceID
             // 
-            this.Vehicle_ID.DataPropertyName = "Vehicle_ID";
-            this.Vehicle_ID.HeaderText = "Vehicle ID";
-            this.Vehicle_ID.Name = "Vehicle_ID";
+            this.InvoiceID.DataPropertyName = "Invoice_ID";
+            this.InvoiceID.HeaderText = "Invoice_ID";
+            this.InvoiceID.MinimumWidth = 6;
+            this.InvoiceID.Name = "InvoiceID";
+            this.InvoiceID.Width = 125;
             // 
-            // Employee_ID
+            // dataGridViewTextBoxColumn7
             // 
-            this.Employee_ID.DataPropertyName = "Employee_ID";
-            this.Employee_ID.HeaderText = "Employee ID";
-            this.Employee_ID.Name = "Employee_ID";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Date";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Date";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 125;
             // 
-            // EstimatePrice
+            // dataGridViewTextBoxColumn8
             // 
-            this.EstimatePrice.DataPropertyName = "EstimatePrice";
-            this.EstimatePrice.HeaderText = "Estimate Price";
-            this.EstimatePrice.Name = "EstimatePrice";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Employee_ID";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Employee_ID";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 125;
             // 
-            // FinalPrice
+            // customerIDDataGridViewTextBoxColumn
             // 
-            this.FinalPrice.DataPropertyName = "FinalPrice";
-            this.FinalPrice.HeaderText = "Final Price";
-            this.FinalPrice.Name = "FinalPrice";
+            this.customerIDDataGridViewTextBoxColumn.DataPropertyName = "Customer_ID";
+            this.customerIDDataGridViewTextBoxColumn.HeaderText = "Customer_ID";
+            this.customerIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerIDDataGridViewTextBoxColumn.Name = "customerIDDataGridViewTextBoxColumn";
+            this.customerIDDataGridViewTextBoxColumn.Width = 125;
             // 
-            // btnUpdate
+            // serviceIDDataGridViewTextBoxColumn
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(227, 395);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(177, 23);
-            this.btnUpdate.TabIndex = 34;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.serviceIDDataGridViewTextBoxColumn.DataPropertyName = "Service_ID";
+            this.serviceIDDataGridViewTextBoxColumn.HeaderText = "Service_ID";
+            this.serviceIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.serviceIDDataGridViewTextBoxColumn.Name = "serviceIDDataGridViewTextBoxColumn";
+            this.serviceIDDataGridViewTextBoxColumn.Width = 125;
             // 
-            // invoiceIDDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn9
             // 
-            this.invoiceIDDataGridViewTextBoxColumn.DataPropertyName = "Invoice_ID";
-            this.invoiceIDDataGridViewTextBoxColumn.HeaderText = "Invoice_ID";
-            this.invoiceIDDataGridViewTextBoxColumn.Name = "invoiceIDDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "EstimatePrice";
+            this.dataGridViewTextBoxColumn9.HeaderText = "EstimatePrice";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 125;
             // 
-            // dateDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn10
             // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "FinalPrice";
+            this.dataGridViewTextBoxColumn10.HeaderText = "FinalPrice";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 125;
             // 
-            // vehicleIDDataGridViewTextBoxColumn
+            // customerDataGridViewTextBoxColumn
             // 
-            this.vehicleIDDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_ID";
-            this.vehicleIDDataGridViewTextBoxColumn.HeaderText = "Vehicle_ID";
-            this.vehicleIDDataGridViewTextBoxColumn.Name = "vehicleIDDataGridViewTextBoxColumn";
+            this.customerDataGridViewTextBoxColumn.DataPropertyName = "Customer";
+            this.customerDataGridViewTextBoxColumn.HeaderText = "Customer";
+            this.customerDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerDataGridViewTextBoxColumn.Name = "customerDataGridViewTextBoxColumn";
+            this.customerDataGridViewTextBoxColumn.Visible = false;
+            this.customerDataGridViewTextBoxColumn.Width = 125;
             // 
-            // employeeIDDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn11
             // 
-            this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "Employee_ID";
-            this.employeeIDDataGridViewTextBoxColumn.HeaderText = "Employee_ID";
-            this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Employee";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Employee";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Visible = false;
+            this.dataGridViewTextBoxColumn11.Width = 125;
             // 
-            // estimatePriceDataGridViewTextBoxColumn
+            // serviceDataGridViewTextBoxColumn
             // 
-            this.estimatePriceDataGridViewTextBoxColumn.DataPropertyName = "EstimatePrice";
-            this.estimatePriceDataGridViewTextBoxColumn.HeaderText = "EstimatePrice";
-            this.estimatePriceDataGridViewTextBoxColumn.Name = "estimatePriceDataGridViewTextBoxColumn";
-            // 
-            // finalPriceDataGridViewTextBoxColumn
-            // 
-            this.finalPriceDataGridViewTextBoxColumn.DataPropertyName = "FinalPrice";
-            this.finalPriceDataGridViewTextBoxColumn.HeaderText = "FinalPrice";
-            this.finalPriceDataGridViewTextBoxColumn.Name = "finalPriceDataGridViewTextBoxColumn";
-            // 
-            // employeeDataGridViewTextBoxColumn
-            // 
-            this.employeeDataGridViewTextBoxColumn.DataPropertyName = "Employee";
-            this.employeeDataGridViewTextBoxColumn.HeaderText = "Employee";
-            this.employeeDataGridViewTextBoxColumn.Name = "employeeDataGridViewTextBoxColumn";
-            this.employeeDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // vehicleDataGridViewTextBoxColumn
-            // 
-            this.vehicleDataGridViewTextBoxColumn.DataPropertyName = "Vehicle";
-            this.vehicleDataGridViewTextBoxColumn.HeaderText = "Vehicle";
-            this.vehicleDataGridViewTextBoxColumn.Name = "vehicleDataGridViewTextBoxColumn";
-            this.vehicleDataGridViewTextBoxColumn.Visible = false;
+            this.serviceDataGridViewTextBoxColumn.DataPropertyName = "Service";
+            this.serviceDataGridViewTextBoxColumn.HeaderText = "Service";
+            this.serviceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.serviceDataGridViewTextBoxColumn.Name = "serviceDataGridViewTextBoxColumn";
+            this.serviceDataGridViewTextBoxColumn.Visible = false;
+            this.serviceDataGridViewTextBoxColumn.Width = 125;
             // 
             // invoiceBindingSource
             // 
@@ -225,18 +243,20 @@
             // 
             // WorkOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnUpdate);
+            this.BackColor = System.Drawing.Color.LightCoral;
+            this.Controls.Add(this.invoiceDataGridView);
+            this.Controls.Add(this.btnWOcancel);
+            this.Controls.Add(this.btnWorkupdate);
+            this.Controls.Add(this.btnWOdelete);
             this.Controls.Add(this.actualPriceBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.estimatedPriceBox);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.workOrdergridView);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "WorkOrder";
-            this.Size = new System.Drawing.Size(564, 426);
+            this.Size = new System.Drawing.Size(701, 537);
             this.Load += new System.EventHandler(this.WorkOrder_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.workOrdergridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -244,19 +264,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView workOrdergridView;
         private System.Windows.Forms.TextBox actualPriceBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox estimatedPriceBox;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.BindingSource invoiceBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Invoice_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Vehicle_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Employee_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EstimatePrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FinalPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn invoiceIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleIDDataGridViewTextBoxColumn;
@@ -265,6 +274,25 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn finalPriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Button btnWOdelete;
+        private System.Windows.Forms.Button btnWorkupdate;
+        private System.Windows.Forms.Button btnWOcancel;
+        private System.Windows.Forms.DataGridView invoiceDataGridView;
+        private System.Windows.Forms.BindingSource invoiceBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serviceIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serviceDataGridViewTextBoxColumn;
     }
 }
